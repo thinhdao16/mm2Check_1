@@ -64,6 +64,17 @@
     integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA=="
     crossorigin="anonymous" />
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isMobile) {
+        if (!window.location.href.includes('m.')) {
+          window.location.href = window.location.href.replace('://', '://m-');
+        }
+      }
+    });
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74723545-6"></script>
   <script>

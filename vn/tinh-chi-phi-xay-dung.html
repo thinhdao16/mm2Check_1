@@ -53,6 +53,17 @@
   <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
     integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA=="
     crossorigin="anonymous" />
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isMobile) {
+        if (!window.location.href.includes('m.')) {
+          window.location.href = window.location.href.replace('://', '://m-');
+        }
+      }
+    });
+  </script>
   <!-- <script>
     document.addEventListener('DOMContentLoaded', function () {
       var isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
